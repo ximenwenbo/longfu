@@ -78,27 +78,7 @@ class NewsController extends Controller
 
 public function index(){
 
-    //获取联系方式
-    $info = get_tel();
 
-
-
-    $this->assign('info',$info);
-
-    $data = NewsCategory::select();
-    $this->assign('data',$data);
-    //获取新闻信息
-    $news = new News();
-    $infos = News::order('id desc')->select();
-   // $infos = DB::name('news')->order('id desc');
-  //  $infos = DB::name('news') ->order('id desc')->paginate(4);
-    //$pagelist = $infos->render();
-   // $this->assign('pagelist',$pagelist);
-
-
-
-    //分配到模板
-    $this->assign('infos',$infos);
     //展示模板
     return $this->fetch();
 
@@ -106,6 +86,14 @@ public function index(){
 }
 
 public function detail(News $news){
+
+
+  //获取新闻信息
+    $new = new News();
+    //获取seo搜索
+    $da= get_seo();
+
+    $this->assign('da',$da);
 
     $this->assign('info',$news);
     //展示到详情页

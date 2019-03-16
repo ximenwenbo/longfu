@@ -20,7 +20,7 @@ return [
     'home_images'=>'/home/images/',
     'home_js'=>'/home/js/',
     'home_fonts'=>'/home/fonts/',
-    'home_jquery'=>'/home/jquery-3.3.1/',
+
 
     //后台配置文件
     'admin_lib' =>'/admin/lib/',
@@ -38,6 +38,8 @@ return [
         // 验证成功后是否重置
         'reset'    => true
     ],
+
+    'SHOW_PAGE_TRACE'  =>true,
 
     'plugin'                =>'/plugin/',
     // 应用调试模式
@@ -141,6 +143,8 @@ return [
     'request_cache_expire'   => null,
     // 全局请求缓存排除规则
     'request_cache_except'   => [],
+
+
 
     // +----------------------------------------------------------------------
     // | 模板设置

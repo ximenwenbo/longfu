@@ -1,115 +1,137 @@
-{include file="pub/head"}
-<!--publicBanner-->
-<div class="piblicBanner">
-    <img src="{:config('home_images')}innerPublicBanner.jpg">
-    <div class="breadcrumb_part">
-        <div class="breadcrumb">
+﻿{include file="pub/head"}
+    <!--banner-->
+    <div id="carousel-example-generic" class="carousel carousel-fade">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{:config('home_images')}banner.png" class="img-responsive" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <!--/banner-->
+
+    <div class="plan_com_con MB15">
+        <div class="plan_com row txt_tab txt_tab_num3">
+            <div class="col-md-4 col-sm-4 col-xs-4"><a href="javascript:;" class="cur">企业动态</a></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><a href="javascript:;">活动优惠</a></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><a href="javascript:;">行业资讯</a></div>
+        </div>
+    </div>
+
+    <div class="heng_box heng_box_news">
+        <div class="plan_com clearfix">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="guide">
-                            <h2>木瓜新闻 /
-                                <small>Small Craftsman News</small>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{volist name="data" id="v"}
-<div class="caseList">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+                <div class="row c1_detail">
 
-                {if condition="$key==0"}
-                <div class="tb">
-
-
-                    <ul id="myTab">
-
-
-
-                        <li>
-
-                            <input type="button"  style="margin-top: 40px;margin-right:300px " class="btn btn-primary"  value="{$v.category_name}">
-
-                        </li>
-                        {else/}
-                        <li  class="active">
-
-                            <input type="button"  style="margin-top: 30px" class="btn btn-success"  value="{$v.category_name}">
-
-                        </li>
-
-
-
-
-
-
-
-
-
-                    </ul>
-                </div>
-                {/if}
-
-            </div>
-        </div>
-    </div>
-
-</div>
-<!--newslist-->
-
-<div class="newsList" >
-
-    <div class="container" >
-        <div class="row" id="{$v.category_id}">
-
-            {volist name="infos" id='vv' empty="敬请期待..."}
-
-            {eq name="$v.category_id" value="$vv.category_id"}
-            <div class="col-md-6">
-                <a href="/home/news/detail?id= +{$vv.id}">
-                    <div class="newsItem">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 paddR">
-                                <div class="newsPic">
-                                    <img   src="{:substr($vv.img,1)} " width="100" height="120">
-                                </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                                <div class="newsTxt">
-                                    <h4>{$vv.title}</h4>
+                    <ul class="newslist">
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
                                     <p>
-                                        {$vv.keywords}
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
                                     </p>
-                                    <span>{:substr($vv.create_time,0,10)}</span>
                                 </div>
-                            </div>
+                            </a>
+                        </li>
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
+                                    <p>
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
+                                    <p>
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
+                                    <p>
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
+                                    <p>
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-sr="move 100px, over .8s,wait .2s, enter bottom">
+                            <a href="#">
+                                <span class="ri">
+                                    <i>07</i>
+                                    <time>2017-06</time>
+                                </span>
+                                <div class="wen_nei">
+                                    <h4>天气降温了，三成景提醒您注意防寒保暖</h4>
+                                    <p>
+                                        艾灸太火了！火到啥程度？群里的一个小伙伴抱怨，天一灸为什么你的群里有那么多卖艾灸产品的？每天都有很多人加我推销艾灸产品，真的很烦，艾灸真有那么神奇？
+                                        能够治疗百病？为啥一夜之间火遍大江南北呢？天一灸你快快写一篇关于艾灸的文章吧。
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--分页开始-->
+                    <div class="pager ue-clear">
+                        <div class="pagin-list pc col-md-12 col-sm-12 col-xs-12">
+                            <span class="current prev">上一页</span>
+                            <span class="current">1</span>
+                            <a href="javascript:;">2</a>
+                            <a href="javascript:;">3</a>
+                            <a href="javascript:;" class="next">下一页</a>
+                        </div>
+                        <div class="mobile">
+                            <a href="#">查看更多</a>
                         </div>
                     </div>
-                </a>
-            </div>
-            {/eq}
-            {/volist}
-
-
-            <div class="col-md-12">
-                <div class="page"></div>
+                    <!--/分页结束-->
+                </div>
             </div>
         </div>
     </div>
 
-</div>
-{/volist}
-
-
-
-
-
-{include file="pub/foot"}
-
-
+  {include file="pub/foot"}

@@ -35,21 +35,23 @@
     <form class="form form-horizontal" action="{$Request.url}" method="post">
 
       <div class="row cl">
-        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+        <label class="form-label col-xs-3"><i class="Hui-iconfont"> <img src="\admin\static\h-ui.admin\images\hh.png" alt=""></i></label>
         <div class="formControls col-xs-8">
-          <input name="mg_name" type="text" placeholder="账户" class="input-text size-L">
+          <input name="mg_name"  value="{$Request.session.mg_name ?? ''}" type="text" placeholder="账户" class="input-text size-L">
         </div>
       </div>
 
       <div class="row cl">
-        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <label class="form-label col-xs-3"><i class="Hui-iconfont"><img src="\admin\static\h-ui.admin\images\ss.png" alt=""></i></label>
         <div class="formControls col-xs-8">
-          <input name="mg_pwd" type="password" placeholder="密码" class="input-text size-L">
+          <input name="mg_pwd" type="password" value="{$Request.session.mg_pwd ?? ''}" placeholder="密码" class="input-text size-L">
         </div>
       </div>
 
       <div class="row cl">
+
         <div class="formControls col-xs-8 col-xs-offset-3">
+
           <input class="input-text size-L" type="text" placeholder="验证码"
                  onblur="if(this.value==''){this.value='验证码:'}"
                  onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:"
@@ -65,7 +67,7 @@
       <div class="row cl">
         <div class="formControls col-xs-8 col-xs-offset-3">
           <label for="online">
-            <input type="checkbox" name="online" id="online" value="">
+            <input type="checkbox" checked="checked" name="online" id="online" value="77">
             使我保持登录状态</label>
         </div>
       </div>
@@ -78,7 +80,7 @@
     </form>
   </div>
 </div>
-<div class="footer">Copyright 你的公司名称 by H-ui.admin v3.1</div>
+<div class="footer">Copyright 北京长顺邓氏制冷设备有限公司 </div>
 <script type="text/javascript" src="{:config('admin_lib')}jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="{:config('admin_static')}h-ui/js/H-ui.min.js"></script>
 </body>
